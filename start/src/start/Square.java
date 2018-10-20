@@ -2,36 +2,20 @@
 package start;
 
 import java.awt.Color;
-import java.util.Random;
 
 public class Square implements Figure{
 	
-	float side = 1;
-	Color color = Color.black;
+	private float side = 1;
+	private Color color = Color.black;
+	
+	public Square(float side, Color color) {
+		this.side = side;
+		this.color = color;
+	}
 	
 	@Override
 	public float getSide() {
 		return side;
-	}
-	
-	@Override
-	public void generate() {
-		// TODO Auto-generated method stub
-		Random random = new Random();
-		
-		side = random.nextFloat() * 100;
-		
-		float r = random.nextFloat();
-		float g = random.nextFloat();
-		float b = random.nextFloat();
-		color = new Color(r, g, b);
-		
-	}
-
-	@Override
-	public void draw() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override

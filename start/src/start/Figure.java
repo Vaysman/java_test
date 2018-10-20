@@ -4,10 +4,6 @@ import java.awt.Color;
 
 public interface  Figure {
 	
-	public void generate();
-	
-	public void draw();
-	
 	public float getS();
 	
 	public String getColor();

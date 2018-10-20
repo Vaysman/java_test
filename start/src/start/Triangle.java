@@ -1,12 +1,17 @@
 package start;
 
 import java.awt.Color;
-import java.util.Random;
 
 public class Triangle implements Figure{
 
-	float l1 = 1, l2 = 1;
-	Color color = Color.black;
+	private float l1 = 1, l2 = 1;
+	private Color color = Color.black;
+	
+	public Triangle(float l1, float l2, Color color) {
+		this.l1 = l1;
+		this.l2 = l2;
+		this.color = color;
+	}
 	
 	@Override
 	public float getSide1() {
@@ -21,25 +26,6 @@ public class Triangle implements Figure{
 		return (float) Math.sqrt(l1*l1+l2*l2);
 	}
 	
-	@Override
-	public void generate() {
-		// TODO Auto-generated method stub
-		Random random = new Random();
-		
-		l1 = random.nextFloat() * 100;
-		l2 = random.nextFloat() * 100;
-		
-		float r = random.nextFloat();
-		float g = random.nextFloat();
-		float b = random.nextFloat();
-		color = new Color(r, g, b);
-	}
-
-	@Override
-	public void draw() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public float getS() {

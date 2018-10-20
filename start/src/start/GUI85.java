@@ -8,9 +8,18 @@ import javax.swing.JPanel;
 
 public class GUI85 extends JPanel{
 	
-	public List<Figure> figures;
+	private static final long serialVersionUID = 1L;
+
+	private List<Figure> figures;
 	
-	int x, y;
+	private int x, y;
+	
+	public void setFigures(List<Figure> fig){
+		figures = fig;
+	}
+	public List<Figure> getFigures(){
+		return figures;
+	}
 	
 	public void paintComponent(Graphics g) {
 		this.setBackground(Color.WHITE);

@@ -1,36 +1,20 @@
 package start;
 
 import java.awt.Color;
-import java.util.Random;
 
 public class Circle implements Figure{
 	
-	float r = 1;
-	Color color = Color.black;
+	private float r = 1;
+	private Color color = Color.black;
+	
+	public Circle(float r, Color color) {
+		this.r = r;
+		this.color = color;
+	}
 	
 	@Override
 	public float getR() {
 		return r;
-	}
-	
-	@Override
-	public void generate() {
-		// TODO Auto-generated method stub
-		Random random = new Random();
-		
-		r = random.nextFloat() * 100;
-		
-		float r = random.nextFloat();
-		float g = random.nextFloat();
-		float b = random.nextFloat();
-		color = new Color(r, g, b);
-		
-	}
-
-	@Override
-	public void draw() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -112,5 +96,6 @@ public class Circle implements Figure{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 
 }

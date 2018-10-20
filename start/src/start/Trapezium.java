@@ -1,13 +1,20 @@
 package start;
 
 import java.awt.Color;
-import java.util.Random;
 
 public class Trapezium implements Figure{
 	
-	float a = 1, b = 1, c = 1;
-	float angle = (float) (Math.PI/2);
-	Color color = Color.black;
+	private float a = 1, b = 1, c = 1;
+	private float angle = (float) (Math.PI/2);
+	private Color color = Color.black;
+	
+	public Trapezium(float a, float b, float c, float angle, Color color) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.angle = angle;
+		this.color = color;
+	}
 	
 	@Override
 	public float getA() {
@@ -26,28 +33,6 @@ public class Trapezium implements Figure{
 		return angle;
 	}
 	
-	@Override
-	public void generate() {
-		// TODO Auto-generated method stub
-		Random random = new Random();
-		
-		a = random.nextFloat() * 100;
-		b = random.nextFloat() * 100;
-		c = random.nextFloat() * 100;
-		
-		angle = (float) Math.toRadians(random.nextInt(180));
-		
-		float r = random.nextFloat();
-		float g = random.nextFloat();
-		float b = random.nextFloat();
-		color = new Color(r, g, b);
-	}
-
-	@Override
-	public void draw() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public float getS() {
